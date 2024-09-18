@@ -92,7 +92,7 @@ export async function deleteEvent({ id }) {
 }
 
 export async function updateData({ id, event }) {
-  const response = await fetch(`${baseUrl}/${id}`, {
+  const response = await fetch(`http://localhost:3000/events/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
