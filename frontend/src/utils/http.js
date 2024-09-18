@@ -57,14 +57,8 @@ export async function fetchSelectableImages({ signal }) {
   }
   const { images } = await response.json();
 
-  // Prepend base URL to the image paths
-  const baseUrl = 'https://events-backend-8ju1.onrender.com';
-  const fullImagePaths = images.map(image => ({
-    ...image,
-    fullPath: `${baseUrl}/events/images/${image.path}`,  // Prepend base URL to the image path
-  }));
-
-  return fullImagePaths;
+  
+  return images;
 }
 
 export async function fetchEvent({ signal, id }) {
