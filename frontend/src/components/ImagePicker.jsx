@@ -5,12 +5,12 @@ export default function ImagePicker({ images, selectedImage, onSelect }) {
       <ul>
         {images.map((image) => (
           <li
-            key={image.fullPath}
-            onClick={() => onSelect(image.fullPath)}
-            className={selectedImage === image.fullPath ? 'selected' : undefined}
+            key={image.path}
+            onClick={() => onSelect(image.path)}
+            className={selectedImage === image.path ? 'selected' : undefined}
           >
             <img
-              src= {image.fullPath} 
+              src= {`https://events-backend-8ju1.onrender.com/${image.path}`} 
               alt={image.caption}
             />
           </li>
