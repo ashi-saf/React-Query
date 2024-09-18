@@ -49,7 +49,7 @@ app.get('/events', async (req, res) => {
 });
 
 app.get('/events/images', async (req, res) => {
-  const imagesFileContent = await fs.readFile('./data/images.json');
+  const imagesFileContent = await fs.readFile('./data/images.json', 'utf-8');
   const images = JSON.parse(imagesFileContent);
 
   res.json({ images });
