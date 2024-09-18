@@ -61,7 +61,7 @@ export async function fetchSelectableImages({ signal }) {
 }
 
 export async function fetchEvent({ signal, id }) {
-  const response = await fetch('https://events-backend-8ju1.onrender.com/events/${id}`, {
+  const response = await fetch(`https://events-backend-8ju1.onrender.com/events/${id}`, {
     signal: signal,
   });
   if (!response.ok) {
@@ -75,7 +75,7 @@ export async function fetchEvent({ signal, id }) {
   return event;
 }
 export async function deleteEvent({ id }) {
-  const response = await fetch('https://events-backend-8ju1.onrender.com/events/${id}`, {
+  const response = await fetch(`https://events-backend-8ju1.onrender.com/events/${id}`, {
     method: 'DELETE',
   });
 
@@ -90,7 +90,7 @@ export async function deleteEvent({ id }) {
 }
 
 export async function updateData({ id, event }) {
-  const response = await fetch('https://events-backend-8ju1.onrender.com/events/${id}`, {
+  const response = await fetch(`https://events-backend-8ju1.onrender.com/events/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
